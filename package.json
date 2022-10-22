@@ -1,0 +1,48 @@
+{
+  "name": "@halo-dev/theme-vite-starter",
+  "private": true,
+  "version": "0.0.0",
+  "description": "A development starter theme with Vite Ecosystem for Halo",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint ./src --ext .js,.cjs,.mjs,.ts,.cts,.mts --ignore-path .gitignore",
+    "prettier": "prettier --write './src/**/*.{js,ts,css,json,ml,yaml,html}' './templates/**/*.html'"
+  },
+  "keywords": [
+    "halo",
+    "halo-theme"
+  ],
+  "homepage": "https://github.com/halo-sigs/theme-vite-starter#readme",
+  "bugs": {
+    "url": "https://github.com/halo-sigs/theme-vite-starter/issues"
+  },
+  "author": {
+    "name": "Halo OSS Organization",
+    "url": "https://github.com/halo-dev",
+    "email": "hi@halo.run"
+  },
+  "maintainers": [
+    {
+      "name": "Ryan Wang",
+      "url": "https://github.com/ruibaby",
+      "email": "i@ryanc.cc"
+    }
+  ],
+  "license": "GPL-3.0",
+  "repository": {
+    "url": "https://github.com/halo-sigs/theme-vite-starter",
+    "type": "git"
+  },
+  "devDependencies": {
+    "@types/node": "16",
+    "@typescript-eslint/eslint-plugin": "^5.39.0",
+    "@typescript-eslint/parser": "^5.39.0",
+    "eslint": "^8.24.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.8"
+  }
+}
