@@ -9,8 +9,8 @@ spec:
     website: https://halo.run
   description: A development starter theme with Vite Ecosystem for Halo
   logo: https://halo.run/logo
-  website: https://github.com/halo-sigs/theme-vite-starter
-  repo: https://github.com/halo-sigs/theme-vite-starter.git
+  website: https://github.com/halo-dev/theme-vite-starter
+  repo: https://github.com/halo-dev/theme-vite-starter.git
   settingName: "theme-vite-starter-setting"
   configMapName: "theme-vite-starter-configMap"
   version: 1.0.0

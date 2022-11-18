@@ -13,9 +13,9 @@
     "halo",
     "halo-theme"
   ],
-  "homepage": "https://github.com/halo-sigs/theme-vite-starter#readme",
+  "homepage": "https://github.com/halo-dev/theme-vite-starter#readme",
   "bugs": {
-    "url": "https://github.com/halo-sigs/theme-vite-starter/issues"
+    "url": "https://github.com/halo-dev/theme-vite-starter/issues"
   },
   "author": {
     "name": "Halo OSS Organization",
@@ -31,7 +31,7 @@
   ],
   "license": "GPL-3.0",
   "repository": {
-    "url": "https://github.com/halo-sigs/theme-vite-starter",
+    "url": "https://github.com/halo-dev/theme-vite-starter",
     "type": "git"
   },
   "devDependencies": {
