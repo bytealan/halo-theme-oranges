@@ -1,3 +1,23 @@
-# theme-vite-starter
+# Theme Vite Starter
 
-A development starter theme with Vite Ecosystem for Halo
+一个集成了 Vite 的主题快速开始模板。
+
+主题开发文档可查阅：<https://docs.halo.run/2.0.0-SNAPSHOT/developer-guide/theme/prepare>
+
+## 开发
+
+```bash
+git clone git@github.com:halo-dev/theme-modern-starter.git ~/halo2-dev/themes/theme-modern-starter
+```
+
+```bash
+cd ~/halo2-dev/themes/theme-modern-starter
+```
+
+```bash
+pnpm install 
+```
+
+```bash
+pnpm dev
+```
