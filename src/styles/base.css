@@ -90,7 +90,7 @@ a:hover {
 .friend-index .friend-list,
 .archives .post-list,
 .tag-index .tag-list,
-.about-index .markdown-body {
+.single-page-index .markdown-body {
   padding: 0 40px;
 }
 
@@ -110,7 +110,7 @@ a:hover {
   .friend-index .friend-list,
   .archives .post-list,
   .tag-index .tag-list,
-  .about-index .markdown-body {
+  .single-page-index .markdown-body {
     padding: 0;
   }
   .category-index .category-list {
@@ -169,7 +169,7 @@ a:hover {
   .friend-index .friend-list,
   .archives .post-list,
   .tag-index .tag-list,
-  .about-index .markdown-body {
+  .single-page-index .markdown-body {
     padding: 0 20px;
   }
 }
