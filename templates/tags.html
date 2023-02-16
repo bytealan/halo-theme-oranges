@@ -1,0 +1,16 @@
+<!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" th:replace="modules/layout :: html(content = ~{::content})">
+<th:block th:fragment="content">
+  <div class="container tag-index" th:with="tags = ${tagFinder.listAll()}">
+    <div>
+      <ul class="tag-list">
+        <li class="tag-list-item" th:each="tagItem,tagStat: ${tags}">
+          <a class="tag-list-link" th:href="@{${tagItem.status.permalink}}" th:text="${tagItem.spec.displayName}"></a>
+          <span class="tag-list-count" th:text="${tagItem.status.visiblePostCount}"></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</th:block>
+</html>
