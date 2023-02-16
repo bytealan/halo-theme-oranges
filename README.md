@@ -1,23 +1,10 @@
-# Theme Vite Starter
+# halo-theme-oranges
+## 说明
+该主题原作者为 zchengsite  
 
-一个集成了 Vite 的主题快速开始模板。
+原主题地址：[hexo-theme-oranges](https://github.com/zchengsite/hexo-theme-oranges)
 
-主题开发文档可查阅：<https://docs.halo.run/2.0.0-SNAPSHOT/developer-guide/theme/prepare>
-
-## 开发
-
-```bash
-git clone git@github.com:halo-dev/theme-vite-starter.git ~/halo2-dev/themes/theme-vite-starter
-```
-
-```bash
-cd ~/halo2-dev/themes/theme-vite-starter
-```
-
-```bash
-pnpm install 
-```
-
-```bash
-pnpm dev
-```
+## To Do List
+- [ ] 文章详情页-数学公式支持
+- [ ] 文章详情页-代码块复制
+- [ ] 文章详情页-评论模块

@@ -1,0 +1,52 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="<%= config.keywords %>" />
+  <meta name="author" content="<%= config.author %>" />
+  <meta name="description" content="<%= config.description %>" />
+  <title th:text="${site.title}"></title>
+  <link rel="icon" th:href="${site.favicon}">
+
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+  <!-- site css -->
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1886449_67xjft27j1l.css" />
+  <link rel="stylesheet" th:href="@{/assets/dist/style.css}" />
+  <script th:src="@{/assets/dist/main.iife.js}"></script>
+  
+  <!-- 代码块风格 -->
+  <th:block th:if="${theme.config.styles.code_block} == 'mac-black'">
+    <link rel="stylesheet" th:href="@{/assets/css/figcaption/mac-block.css}" />
+  </th:block>
+  
+  <!-- jquery3.3.1 -->
+  <th:block th:if="${theme.config.cdns.jquery}">
+    <script defer type="text/javascript" th:src="${theme.config.cdns.jquery_url}"></script>
+  </th:block>
+  <th:block th:else>
+    <script defer type="text/javascript" th:src="@{/assets/plugins/jquery.min.js}"></script>
+  </th:block>
+  
+
+  <!-- fancybox -->  
+  <th:block th:if="${theme.config.cdns.fancybox}">
+    <link th:href="${theme.config.cdns.fancybox_js_url}" rel="stylesheet">
+    <script defer type="text/javascript" th:src="${theme.config.cdns.fancybox_css_url}"></script>
+  </th:block>
+  <th:block th:else>
+    <link th:href="@{/assets/plugins/jquery.fancybox.min.css}" rel="stylesheet">
+    <script defer type="text/javascript" th:src="@{/assets/plugins/jquery.fancybox.min.js}"></script>
+  </th:block>
+  <script type="text/javascript" th:src="@{/assets/js/fancybox.js}"></script>
+
+  <!-- gtag & footer view -->
+
+  <script>
+    var html = document.documentElement
+    const colorMode = localStorage.getItem('color-mode')
+    if (colorMode) {
+      document.documentElement.setAttribute('color-mode', colorMode)
+    }
+  </script>
+</head>

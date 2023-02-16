@@ -1,17 +1,17 @@
 apiVersion: theme.halo.run/v1alpha1
 kind: Theme
 metadata:
-  name: theme-vite-starter
+  name: theme-oranges
 spec:
-  displayName: Vite Starter
+  displayName: Theme Oranges
   author:
-    name: Halo OSS Organization
-    website: https://halo.run
+    name: WuWenL0
+    website: https://wuwenl.com
   description: A development starter theme with Vite Ecosystem for Halo
-  logo: https://halo.run/logo
-  website: https://github.com/halo-dev/theme-vite-starter
-  repo: https://github.com/halo-dev/theme-vite-starter.git
-  settingName: "theme-vite-starter-setting"
-  configMapName: "theme-vite-starter-configMap"
+  logo: /themes/theme-oranges/assets/images/avatar.png
+  website: https://wuwenl.com
+  repo: https://github.com/WuWenL0/halo-theme-oranges
+  settingName: "theme-oranges-setting"
+  configMapName: "theme-oranges-configMap"
   version: 1.0.0
   require: 2.0.0

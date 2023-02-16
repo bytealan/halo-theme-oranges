@@ -1,13 +1,99 @@
 apiVersion: v1alpha1
 kind: Setting
 metadata:
-  name: theme-vite-starter-setting
+  name: theme-oranges-setting
 spec:
   forms:
     - group: styles
       label: 样式
       formSchema:
-        - $formkit: color
-          name: background_color
-          label: 背景颜色
-          value: "#f2f2f2"
+        - $formkit: radio
+          name: code_block
+          label: 代码块风格
+          value: normal
+          options:
+            - label: 默认风格
+              value: normal
+            - label: mac黑色风格
+              value: mac-black
+    - group: cdns
+      label: CDN配置
+      formSchema:
+        - $formkit: radio
+          name: jquery
+          id: jquery
+          label: jquery
+          value: false
+          options:
+            - label: 开启
+              value: true
+            - label: 关闭
+              value: false
+        - $formkit: text
+          if: "$get(jquery).value"
+          name: jquery_url
+          label: jquery cdn地址
+          value: https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js
+        - $formkit: radio
+          name: fancybox
+          id: fancybox
+          label: fancybox
+          value: false
+          options:
+            - label: 开启
+              value: true
+            - label: 关闭
+              value: false
+        - $formkit: text
+          if: "$get(fancybox).value"
+          name: fancybox_css_url
+          label: fancybox css cdn地址
+          value: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css
+        - $formkit: text
+          if: "$get(fancybox).value"
+          name: fancybox_js_url
+          label: fancybox js cdn地址
+          value: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js
+    - group: fotter
+      label: 页脚
+      formSchema:
+        - $formkit: repeater
+          name: social_media
+          label: 社交媒体
+          value: [ ]
+          children:
+            - $formkit: select
+              name: icon
+              label: 图标
+              options:
+                - label: 电子邮箱
+                  value: envelope
+                - label: 微信
+                  value: wechat
+                - label: 腾讯 QQ
+                  value: qq
+                - label: 新浪微博
+                  value: weibo
+                - label: Facebook
+                  value: facebook
+                - label: Twitter
+                  value: twitter
+                - label: GitHub
+                  value: github
+            - $formkit: text
+              name: name
+              label: 名称
+            - $formkit: text
+              name: url
+              label: 链接
+              validation: "required"
+            - $formkit: radio
+              name: url_type
+              label: 链接类型
+              value: normal
+              help: "如果选择了图片类型，那么在访客点击之后会使用弹框的形式加载"
+              options:
+                - label: 跳转链接
+                  value: normal
+                - label: 图片
+                  value: image

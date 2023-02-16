@@ -1,5 +1,5 @@
 {
-  "name": "@halo-dev/theme-vite-starter",
+  "name": "@halo-dev/theme-oranges",
   "private": true,
   "version": "0.0.0",
   "description": "A development starter theme with Vite Ecosystem for Halo",
@@ -42,6 +42,8 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "prettier": "^2.7.1",
+    "stylus": "^0.59.0",
+    "stylus-loader": "^7.1.0",
     "typescript": "^4.9.3",
     "vite": "^3.2.4"
   }

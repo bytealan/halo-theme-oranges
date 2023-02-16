@@ -1,0 +1,26 @@
+<div class="footer">
+  <div class="social">
+    <ul>
+      <li th:each="item : ${theme.config.fotter.social_media}">
+        <a th:title="${item.name}" th:href="${item.url}">
+          <i th:class="|iconfont icon-${item.icon}|"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="footer-more">
+    <a  th:href="${site.url}">
+      Copyright ©
+      <span
+        id="site_date"
+        th:with="now=${#temporals.createNow()}"
+        th:text="${#temporals.format(now, 'yyyy')}"
+      ></span>
+      <span th:text="${site?.title}"></span>
+    </a>
+  </div>
+  <div class="footer-more">
+    <a href="https://github.com/WuWenL0/halo-theme-oranges">Theme is oranges</a>
+    <a href="https://halo.run/">Powered by  Halo</a>
+  </div>
+</div>

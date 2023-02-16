@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html xmlns:th="https://www.thymeleaf.org" th:replace="modules/layout :: html(content = ~{::content})">
   <th:block th:fragment="content">
-    <ul>
-      <li th:each="post : ${posts.items}">
-        <a th:text="${post.spec.title}" th:href="${post.status.permalink}"></a>
-      </li>
-    </ul>
+    <div class="container index">
+      <div class="post-list">
+        <!-- 遍历渲染文章 -->
+        <div class="post-item" th:each="post : ${posts.items}" th:title="${post.spec.title}">
+          <div class="time-m-d" th:text="${#dates.format(post.spec.publishTime, 'yyyy-MM-dd')}"></div>
+          <div class="title">
+            <a th:href="${post.status.permalink}">
+              <span>
+                <span th:if="${post.spec.pinned}" th:title="${post.spec.title}" class="icon iconfont icon-pin-top post-top"></span>
+                <span th:text="${post.spec.title}"></span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <nav class="post-navigation">
+        <a th:if="${posts.hasPrevious()}" th:href="@{${posts.prevUrl}}"><i class="iconfont icon-angleleft"></i></a>
+        <span class="page-num" th:text="|${posts.page} / ${posts.totalPages}|"></span>
+        <a th:if="${posts.hasNext()}" th:href="@{${posts.nextUrl}}"><i class="iconfont icon-angleright"></i></a>
+      </nav>
+    </div>
   </th:block>
 </html>

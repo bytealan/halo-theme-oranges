@@ -1,6 +1,51 @@
+<!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+<!--mathjax-->
+<!--codeBlock.copy-->
 <!DOCTYPE html>
 <html xmlns:th="https://www.thymeleaf.org" th:replace="modules/layout :: html(content = ~{::content})">
-  <th:block th:fragment="content">
-    <article th:utext="${post.content.content}"></article>
-  </th:block>
+<th:block th:fragment="content">
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title" th:text="${post.spec.title}"></div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10"></i>
+          <span th:text="${#dates.format(post.status.lastModifyTime,'yyyy-MM-dd')}"></span>
+        </span>
+        <span class="post-tags" th:if="!${#lists.isEmpty(post.tags)}">
+          <i class="iconfont icon-tags mr-10"></i>
+          <span class="span--tag mr-8" th:each="tag : ${post.tags}">
+            <a th:href="@{${tag.status.permalink}}" th:title="${tag.spec.displayName}"
+               th:text="|#${tag.spec.displayName}|">
+            </a>
+          </span>
+        </span>
+      </div>
+      <div class="markdown-body" th:utext="${post.content.content}">
+      </div>
+      <div class="prev-or-next" th:with="postCursor = ${postFinder.cursor(post.metadata.name)}">
+        <div class="post-foot-next">
+          <a th:if="${postCursor.hasPrevious()}" th:href="@{${postCursor.previous.status.permalink}}" target="_self">
+            <i class="iconfont icon-chevronleft"></i>
+            <span>上一页</span>
+          </a>
+        </div>
+        
+        <div class="post-foot-prev">
+          <a th:if="${postCursor.hasNext()}" th:href="@{${postCursor.next.status.permalink}}" target="_self">
+            <span>下一页</span>
+            <i class="iconfont icon-chevronright"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!--目录-->
+    
+    <!-- 评论 -->
+  </div>
+</th:block>
 </html>
+
+

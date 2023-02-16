@@ -1,14 +1,29 @@
 <!DOCTYPE html>
-<html lang="en" th:fragment="html (content)">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title th:text="${site.title}"></title>
-    <link rel="stylesheet" th:href="@{/assets/dist/style.css}" href="./assets/dist/style.css" />
-    <script th:src="@{/assets/dist/main.iife.js}"></script>
-  </head>
-  <body th:style="'background-color: '+${theme.config.styles.background_color}">
-    <th:block th:replace="${content}" />
+<html lang="en" th:fragment="html (content)" color-mode="light">
+
+  <th:block th:replace="~{modules/header}" />
+  <body>
+    <div id="app">
+      <th:block th:replace="~{modules/navigation}" />
+      
+      <div class="flex-container">
+        <th:block th:if="${content != null}">
+          <th:block th:replace="${content}" />
+        </th:block>
+          <th:block th:replace="~{modules/fotter}" />
+      </div>
+
+      <div class="tools-bar">
+        <th:block th:if="${backtotop != null}">
+          <th:block th:replace="${backtotop}" />
+        </th:block>
+        
+        <!-- search -->
+
+        <th:block th:replace="~{modules/colorscheme}" />
+
+        <!-- shares -->
+      </div>
+    </div>
   </body>
 </html>
