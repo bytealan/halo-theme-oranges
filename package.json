@@ -46,5 +46,8 @@
     "stylus-loader": "^7.1.0",
     "typescript": "^4.9.3",
     "vite": "^3.2.4"
+  },
+  "dependencies": {
+    "tocbot": "^4.20.1"
   }
 }

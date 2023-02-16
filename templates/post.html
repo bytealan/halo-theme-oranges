@@ -22,7 +22,7 @@
           </span>
         </span>
       </div>
-      <div class="markdown-body" th:utext="${post.content.content}">
+      <div class="markdown-body" id="content" th:utext="${post.content.content}">
       </div>
       <div class="prev-or-next" th:with="postCursor = ${postFinder.cursor(post.metadata.name)}">
         <div class="post-foot-next">
@@ -31,7 +31,7 @@
             <span>上一页</span>
           </a>
         </div>
-        
+
         <div class="post-foot-prev">
           <a th:if="${postCursor.hasNext()}" th:href="@{${postCursor.next.status.permalink}}" target="_self">
             <span>下一页</span>
@@ -40,9 +40,10 @@
         </div>
       </div>
     </div>
-    
+
     <!--目录-->
-    
+    <th:block th:replace="~{modules/catalog}" />
+
     <!-- 评论 -->
   </div>
 </th:block>
