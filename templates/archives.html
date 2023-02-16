@@ -1,0 +1,27 @@
+<!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" th:replace="modules/layout :: html(content = ~{::content})">
+  <th:block th:fragment="content">
+    <div class="container archives">
+      <div class="post-list">
+        <th:block th:each="archive : ${archives}">
+          <div class="content-title">
+            <h2>
+              <span th:text="${archive.year}"></span>
+            </h2>
+          </div>
+          <th:block th:each="month : ${archive.months}">
+            <div class="post-item" th:each="post : ${month.posts}" th:title="${post.spec.title}">
+              <div class="time-m-d" th:text="${#dates.format(post.spec.publishTime, 'MM-DD')}"></div>
+              <div class="title">
+                <a th:href="${post.status.permalink}">
+                  <span th:text="${post.spec.title}"></span>
+                </a>
+              </div>
+            </div>
+          </th:block>
+        </th:block>
+      </div>
+    </div>
+  </th:block>
+</html>
