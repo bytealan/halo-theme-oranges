@@ -15,11 +15,6 @@
   <link rel="stylesheet" th:href="@{/assets/dist/style.css}" />
   <script th:src="@{/assets/dist/main.iife.js}"></script>
   
-  <!-- 代码块风格 -->
-  <th:block th:if="${theme.config.styles.code_block} == 'mac-black'">
-    <link rel="stylesheet" th:href="@{/assets/css/figcaption/mac-block.css}" />
-  </th:block>
-  
   <!-- jquery3.3.1 -->
   <th:block th:if="${theme.config.cdns.jquery}">
     <script defer type="text/javascript" th:src="${theme.config.cdns.jquery_url}"></script>
@@ -28,18 +23,6 @@
     <script defer type="text/javascript" th:src="@{/assets/plugins/jquery.min.js}"></script>
   </th:block>
   
-
-  <!-- fancybox -->  
-  <th:block th:if="${theme.config.cdns.fancybox}">
-    <link th:href="${theme.config.cdns.fancybox_js_url}" rel="stylesheet">
-    <script defer type="text/javascript" th:src="${theme.config.cdns.fancybox_css_url}"></script>
-  </th:block>
-  <th:block th:else>
-    <link th:href="@{/assets/plugins/jquery.fancybox.min.css}" rel="stylesheet">
-    <script defer type="text/javascript" th:src="@{/assets/plugins/jquery.fancybox.min.js}"></script>
-  </th:block>
-  <script type="text/javascript" th:src="@{/assets/js/fancybox.js}"></script>
-
   <!-- gtag & footer view -->
 
   <script>

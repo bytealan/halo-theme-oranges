@@ -8,14 +8,14 @@ spec:
       label: 样式
       formSchema:
         - $formkit: radio
-          name: code_block
-          label: 代码块风格
-          value: normal
+          name: logo
+          label: 显示logo
+          value: true
           options:
-            - label: 默认风格
-              value: normal
-            - label: mac黑色风格
-              value: mac-black
+            - label: 开启
+              value: true
+            - label: 关闭
+              value: false
     - group: cdns
       label: CDN配置
       formSchema:
@@ -34,26 +34,6 @@ spec:
           name: jquery_url
           label: jquery cdn地址
           value: https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js
-        - $formkit: radio
-          name: fancybox
-          id: fancybox
-          label: fancybox
-          value: false
-          options:
-            - label: 开启
-              value: true
-            - label: 关闭
-              value: false
-        - $formkit: text
-          if: "$get(fancybox).value"
-          name: fancybox_css_url
-          label: fancybox css cdn地址
-          value: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css
-        - $formkit: text
-          if: "$get(fancybox).value"
-          name: fancybox_js_url
-          label: fancybox js cdn地址
-          value: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js
     - group: fotter
       label: 页脚
       formSchema:

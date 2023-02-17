@@ -1,9 +1,17 @@
-<!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
 <!DOCTYPE html>
 <html xmlns:th="https://www.thymeleaf.org" th:replace="modules/layout :: html(content = ~{::content})">
 <th:block th:fragment="content">
   <div class="container single-page-index">
     <div class="markdown-body" th:utext="${singlePage.content.content}">
+    </div>
+    <!-- 评论 -->
+    <div class="comment-container">
+      <halo:comment
+        group="content.halo.run"
+        kind="SinglePage"
+        th:attr="name=${singlePage.metadata.name}"
+        colorScheme="colorMode"
+      />
     </div>
   </div>
 </th:block>

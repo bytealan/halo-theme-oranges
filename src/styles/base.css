@@ -4,11 +4,14 @@
 }
 
 html, body {
-  font-size: 10px;
-  letter-spacing: 0.01rem;
   background-color: var(--bg-body);
   transition: color 400ms ease-in-out 0s, background-color 400ms ease-in-out 0s;
   font-family: Consolas, "Liberation Mono", Menlo, Monaco, "Source Han Sans CN", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif
+}
+
+body {
+  font-size: 10px;
+  letter-spacing: 0.01em;
 }
 
 body.hidden {
@@ -21,7 +24,7 @@ body.hidden {
   -webkit-text-size-adjust: 100%;
   line-height: 2;
   color: #24292e;
-  font-size: 1.6rem;
+  font-size: 1.6em;
   line-height: 2;
   word-wrap: break-word;
   color: var(--color-text-md-content)
@@ -29,7 +32,7 @@ body.hidden {
 
 @media (max-width: 768px) {
   .markdown-body {
-    font-size: 1.4rem;
+    font-size: 1.4em;
   }
 }
 
@@ -176,7 +179,7 @@ a:hover {
 
 .post-item {
   display: flex;
-  font-size: 1.6rem;
+  font-size: 1.6em;
   margin-bottom: 20px;
   align-items: center;
   line-height: 21px;
@@ -186,7 +189,7 @@ a:hover {
   flex-shrink: 0;
   margin-right: 30px;
   color: var(--color-text-base);
-  font-size: 1.5rem;
+  font-size: 1em;
   line-height: 21px;
   /*font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;*/
 }
@@ -202,7 +205,7 @@ a:hover {
 
 .post-item .title .post-top {
   font-weight: 600;
-  font-size: 1.7rem;
+  font-size: 1em;
   padding-right: 8px;
 }
 
@@ -223,7 +226,7 @@ a:hover {
 }
 
 .avatar .nickname {
-  font-size: 2rem;
+  font-size: 2em;
   font-weight: 600;
   color: var(--color-text-a);
   padding-top: 10px;
@@ -235,7 +238,7 @@ a:hover {
 }
 
 .content-title {
-  font-size: 1.6rem;
+  font-size: 1.6em;
   color: var(--color-text-a);
   margin-bottom: 20px;
   /*font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;*/
@@ -252,7 +255,7 @@ a:hover {
   position: relative;
   display: inline-block;
   margin: 0 15px;
-  font-size: 1.65rem;
+  font-size: 1.65em;
   font-weight: bold;
   text-align: center;
 }
@@ -300,10 +303,14 @@ a:hover {
 }
 
 .post-navigation {
-  font-size: 1.5rem;
+  font-size: 1em;
   padding: 20px 90px;
   text-align: right;
   color: var(--color-text-base);
+}
+
+.post-navigation a{
+  vertical-align: middle
 }
 
 .post-navigation i {
@@ -327,7 +334,7 @@ a:hover {
 }
 
 .tag-list li {
-  font-size: 1.6rem;
+  font-size: 0;
   display: inline-block;
   padding: 10px;
 }
@@ -335,6 +342,7 @@ a:hover {
 .tag-list li .tag-list-link {
   position: relative;
   padding: 0 2px;
+  font-size: 16px;
   border-radius: 2px;
 }
 
@@ -366,16 +374,21 @@ a:hover {
 .tag-list-count, .category-list-count {
   padding: 0 5px;
   color: #aaa;
-  font-size: 1.2rem;
+  font-size: 12px;
   vertical-align: top;
 }
 
 .category-list .category-list-item {
-  font-size: 1.6rem;
+  font-size: 0;
   padding: 5px 0;
 }
 
+.category-list .category-list-link {
+  font-size: 16px;
+}
+
 .category-list .category-list-item::marker {
+  font-size: 16px;
   content: "• ";
   color: var(--color-text-base)
 }
@@ -385,7 +398,7 @@ a:hover {
 }
 
 .friend-list-item {
-  font-size: 1.6rem;
+  font-size: 1.6em;
   padding: 10px;
 }
 
@@ -396,14 +409,14 @@ a:hover {
 
 .post-details .post-title {
   text-align: center;
-  font-size: 2.2rem;
+  font-size: 2.2em;
   font-weight: 600;
   color: var(--color-text-a);
   padding-bottom: 10px;
 }
 
 .post-details .post-attach {
-  font-size: 1.4rem;
+  font-size: 1.4em;
   text-align: center;
   padding-bottom: 30px;
   color: var(--color-text-a);
@@ -414,15 +427,15 @@ a:hover {
 }
 
 .post-content {
-  padding-bottom: 1rem;
+  padding-bottom: 1em;
 }
 
 .prev-or-next {
-  font-size: 1.5rem;
+  font-size: 1em;
   display: flex;
   justify-content: space-between;
-  padding: 1rem 0;
-  margin: 3rem 0;
+  padding: 1em 0;
+  margin: 3em 0;
   border-top: 1px solid var(--color-divider-md-border);
 }
 
@@ -432,7 +445,7 @@ a:hover {
 
 .prev-or-next .post-attach {
   opacity: 0.9;
-  font-size: 1.2rem;
+  font-size: 1.2em;
   padding: 0 30px;
   display: flex;
   align-items: center;
@@ -460,13 +473,13 @@ a:hover {
   top: calc(290px + 88px + 30px);
   right: 50px;
   width: calc(20% - 50px);
-  font-size: 1.4rem;
+  font-size: 1.4em;
   padding-left: 10px;
 }
 
 .post-catalog .title {
   color: var(--color-text-base);
-  font-size: 1.65rem;
+  font-size: 1.65em;
   font-weight: bold;
   padding: 5px 0;
 }
@@ -554,7 +567,7 @@ a:hover {
   background-color: transparent;
   z-index: 999;
   border-radius: 10px;
-  margin: 0 2rem;
+  margin: 0 2em;
   transition: top 0.2s ease, opacity 0.2s ease;
   outline: 0;
 }
@@ -582,7 +595,7 @@ a:hover {
   outline: 0;
   background-color: transparent;
   padding: 0 10px;
-  font-size: 1.6rem;
+  font-size: 1.6em;
   height: 38px;
   line-height: 38px;
   color: var(--color-text-a);
@@ -603,7 +616,7 @@ a:hover {
 .search-result-list li {
   list-style-type: none;
   padding: 10px;
-  font-size: 1.6rem;
+  font-size: 1.6em;
   border-bottom: 1px dashed var(--color-divider-md-border);
 }
 
@@ -613,7 +626,7 @@ a:hover {
 
 .search-result-abstract {
   padding: 10px 10px 0 10px;
-  font-size: 1.2rem;
+  font-size: 1.2em;
   color: var(--color-text-sub);
   word-break: break-all;
 }
@@ -623,14 +636,14 @@ a:hover {
 }
 
 .local-search-empty {
-  font-size: 1.6rem;
+  font-size: 1.6em;
   color: var(--color-text-a);
 }
 
 .tools-bar {
   position: fixed;
-  right: 2.2rem;
-  bottom: 2.2rem;
+  right: 2.2em;
+  bottom: 2.2em;
 }
 
 .tools-bar .tools-bar-item {
@@ -675,9 +688,9 @@ a:hover {
   content: "";
   position: absolute;
   left: 50%;
-  top: -0.8rem;
+  top: -0.8em;
   transform: translateX(-50%);
-  border: 0.5rem solid rgba(0, 0, 0, 70%);
+  border: 0.5em solid rgba(0, 0, 0, 70%);
   border-bottom-color: transparent;
   border-left-color: transparent;
   border-right-color: transparent;
@@ -687,13 +700,18 @@ a:hover {
   content: attr(data-text);
   position: absolute;
   left: 50%;
-  top: -3rem;
+  top: -3em;
   transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 70%);
   color: #ffffff;
   border-radius: 3px;
   padding: 6px;
-  font-size: 1rem;
-  line-height: 1rem;
+  font-size: 1em;
+  line-height: 1em;
   white-space: nowrap;
+}
+
+.comment-container{
+  padding: 0 40px;
+  margin-top: 10px;
 }

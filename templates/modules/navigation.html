@@ -1,6 +1,6 @@
 <div class="header" th:with="menu = ${menuFinder.getPrimary()}">
   <div class="avatar">
-    <a th:href="${site.url}">
+    <a th:href="${site.url}" th:if="${theme.config.styles.logo}">
       <th:block th:if="${site.logo} != null">
         <img th:src="${site.logo}" alt="">
       </th:block>

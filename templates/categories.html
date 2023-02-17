@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" th:replace="modules/layout :: html(content = ~{::content})">
+<th:block th:fragment="content">
+  <div class="container category-index">
+    <div>
+      <ul class="category-list">
+        <li class="category-list-item" th:each="category : ${categories}">
+          <a class="category-list-link" th:href="${category.status?.permalink}" th:text="${category.spec?.displayName}"></a>
+          <span class="category-list-count" th:text="${category.postCount}"></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</th:block>
+</html>

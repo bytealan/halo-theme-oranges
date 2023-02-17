@@ -14,11 +14,10 @@
       </div>
 
       <div class="tools-bar">
-        <th:block th:if="${backtotop != null}">
-          <th:block th:replace="${backtotop}" />
-        </th:block>
+        <th:block th:replace="~{modules/backtotop}" />
         
         <!-- search -->
+        <th:block th:replace="~{modules/search}" />
 
         <th:block th:replace="~{modules/colorscheme}" />
 

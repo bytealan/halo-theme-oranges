@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" th:replace="modules/layout :: html(content = ~{::content})">
+<th:block th:fragment="content">
+  <div class="container tag-details">
+    <div class="content-title">
+      <h2>
+        <span th:text="${tag.spec.displayName}"></span>
+      </h2>
+    </div>
+    <div class="post-list" th:each="post : ${posts}">
+      <div class="post-item" th:title="${post.spec.title}">
+        <span class="time-m-d" th:text="${#dates.format(post.metadata.creationTimestamp, 'YYYY-MM-DD')}"></span>
+        <a th:href="${post.status.permalink}">
+          <span th:text="${post.spec.title}"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</th:block>
+</html>
