@@ -9,9 +9,12 @@ specifiers:
   eslint-plugin-prettier: ^4.2.1
   prettier: ^2.7.1
   stylus: ^0.59.0
-  stylus-loader: ^7.1.0
+  tocbot: ^4.20.1
   typescript: ^4.9.3
   vite: ^3.2.4
+
+dependencies:
+  tocbot: 4.20.1
 
 devDependencies:
   '@types/node': 18.11.9
@@ -22,7 +25,6 @@ devDependencies:
   eslint-plugin-prettier: 4.2.1_pgxuib4rd7wiymfktharf5ydt4
   prettier: 2.7.1
   stylus: 0.59.0
-  stylus-loader: 7.1.0_stylus@0.59.0
   typescript: 4.9.3
   vite: 3.2.4_t6tx4vfrhgh63ptslzxnlkjody
 
@@ -964,11 +966,6 @@ packages:
     resolution: {integrity: sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw==}
     dev: true
 
-  /klona/2.0.6:
-    resolution: {integrity: sha512-dhG34DXATL5hSxJbIexCft8FChFXtmskoZYnoPWjXQuebWYCNkVeV3KkGegCK9CP1oswI/vQibS2GY7Em/sJJA==}
-    engines: {node: '>= 8'}
-    dev: true
-
   /levn/0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
     engines: {node: '>= 0.8.0'}
@@ -1030,11 +1027,6 @@ packages:
 
   /natural-compare/1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
-    dev: true
-
-  /normalize-path/3.0.0:
-    resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
-    engines: {node: '>=0.10.0'}
     dev: true
 
   /once/1.4.0:
@@ -1241,19 +1233,6 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /stylus-loader/7.1.0_stylus@0.59.0:
-    resolution: {integrity: sha512-gNUEjjozR+oZ8cuC/Fx4LVXqZOgDKvpW9t2hpXHcxjfPYqSjQftaGwZUK+wL9B0QJ26uS6p1EmoWHmvld1dF7g==}
-    engines: {node: '>= 14.15.0'}
-    peerDependencies:
-      stylus: '>=0.52.4'
-      webpack: ^5.0.0
-    dependencies:
-      fast-glob: 3.2.12
-      klona: 2.0.6
-      normalize-path: 3.0.0
-      stylus: 0.59.0
-    dev: true
-
   /stylus/0.59.0:
     resolution: {integrity: sha512-lQ9w/XIOH5ZHVNuNbWW8D822r+/wBSO/d6XvtyHLF7LW4KaCIDeVbvn5DF8fGCJAUCwVhVi/h6J0NUcnylUEjg==}
     hasBin: true
@@ -1289,6 +1268,10 @@ packages:
     dependencies:
       is-number: 7.0.0
     dev: true
+
+  /tocbot/4.20.1:
+    resolution: {integrity: sha512-as1pH/qL0EL7zmMheK+EaMPPmvC9pzEpR98dA7z4DWemUdySi6Ipnk0WIc6AyQegQ7C2nNDuAL0WIo44poeEUg==}
+    dev: false
 
   /tslib/1.14.1:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}

@@ -8,6 +8,14 @@
       </li>
     </ul>
   </div>
+  <div class="footer-more" th:if="!${#strings.isEmpty(theme.config.beian.icp_text)}">
+    <a
+      href="https://beian.miit.gov.cn/"
+      target="_blank"
+      th:href="${theme.config.beian.icp_link}"
+      th:text="${theme.config.beian.icp_text}"
+    ></a>
+  </div>
   <div class="footer-more">
     <a  th:href="${site.url}">
       Copyright ©
@@ -22,5 +30,9 @@
   <div class="footer-more">
     <a href="https://github.com/WuWenL0/halo-theme-oranges">Theme is oranges</a>
     <a href="https://halo.run/">Powered by  Halo</a>
+  </div>
+  <!--全局代码注入-->
+  <div class="footer-more">
+    <halo:footer />
   </div>
 </div>

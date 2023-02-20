@@ -13,5 +13,5 @@ spec:
   repo: https://github.com/WuWenL0/halo-theme-oranges
   settingName: "theme-oranges-setting"
   configMapName: "theme-oranges-configMap"
-  version: 1.0.0
+  version: 1.0.1
   require: 2.0.0
