@@ -24,7 +24,7 @@
         th:with="now=${#temporals.createNow()}"
         th:text="${#temporals.format(now, 'yyyy')}"
       ></span>
-      <span th:text="${site?.title}"></span>
+      <span th:text="${site.title}"></span>
     </a>
   </div>
   <div class="footer-more">

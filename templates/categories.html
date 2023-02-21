@@ -5,7 +5,7 @@
     <div>
       <ul class="category-list">
         <li class="category-list-item" th:each="category : ${categories}">
-          <a class="category-list-link" th:href="${category.status?.permalink}" th:text="${category.spec?.displayName}"></a>
+          <a class="category-list-link" th:href="${category.status.permalink}" th:text="${category.spec.displayName}"></a>
           <span class="category-list-count" th:text="${category.postCount}"></span>
         </li>
       </ul>

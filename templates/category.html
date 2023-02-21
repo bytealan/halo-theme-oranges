@@ -9,7 +9,7 @@
     </div>
     <div class="post-list" th:each="post : ${posts}">
       <div class="post-item" th:title="${post.spec.title}">
-        <span class="time-m-d" th:text="${#dates.format(post.metadata.creationTimestamp, 'YYYY-MM-DD')}"></span>
+        <span class="time-m-d" th:text="${#dates.format(post.spec.publishTime, 'yyyy-MM-dd')}"></span>
         <a th:href="${post.status.permalink}">
           <span th:text="${post.spec.title}"></span>
         </a>
