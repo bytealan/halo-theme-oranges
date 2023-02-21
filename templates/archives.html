@@ -11,7 +11,7 @@
           </div>
           <th:block th:each="month : ${archive.months}">
             <div class="post-item" th:each="post : ${month.posts}" th:title="${post.spec.title}">
-              <div class="time-m-d" th:text="${#dates.format(post.spec.publishTime, 'MM-DD')}"></div>
+              <div class="time-m-d" th:text="${#dates.format(post.spec.publishTime, 'MM-dd')}"></div>
               <div class="title">
                 <a th:href="${post.status.permalink}">
                   <span th:text="${post.spec.title}"></span>
@@ -21,6 +21,11 @@
           </th:block>
         </th:block>
       </div>
+      <nav class="post-navigation">
+        <a th:if="${archives.hasPrevious()}" th:href="@{${archives.prevUrl}}"><i class="iconfont icon-angleleft"></i></a>
+        <span class="page-num" th:text="|${archives.page} / ${archives.totalPages}|"></span>
+        <a th:if="${archives.hasNext()}" th:href="@{${archives.nextUrl}}"><i class="iconfont icon-angleright"></i></a>
+      </nav>
     </div>
   </th:block>
 </html>
