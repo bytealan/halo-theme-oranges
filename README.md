@@ -35,6 +35,8 @@ pnpm dev
 ```
 
 ## 更新
+### [1.0.3] 2023/03/06
+- [#6](https://github.com/bytealan/halo-theme-oranges/pull/6) 页脚添加RSS
 ### [1.0.2] 2023/02/21
 - 修复归档页面、分类页面时间格式错误问题
 - 归档页面添加分页按钮
