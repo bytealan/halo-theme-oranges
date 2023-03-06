@@ -60,6 +60,8 @@ spec:
                   value: twitter
                 - label: GitHub
                   value: github
+                - label: RSS
+                  value: rss
             - $formkit: text
               name: name
               label: 名称
