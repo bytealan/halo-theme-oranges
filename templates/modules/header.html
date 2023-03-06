@@ -4,7 +4,15 @@
   <meta name="keywords" content="<%= config.keywords %>" />
   <meta name="author" content="<%= config.author %>" />
   <meta name="description" content="<%= config.description %>" />
-  <title th:text="${site.title}"></title>
+  <title th:text="${site.title}" th:if="${_templateId}==index"></title>
+  <title th:text="${site.title}" th:if="!${_templateId}"></title>
+  <title th:text="${post.spec.title} + ' - ' + ${site.title}" th:if="${_templateId}==post"></title>
+  <title th:text="'标签: ' + ${site.title}" th:if="${_templateId}==tags"></title>
+  <title th:text="'标签：' + ${tag.spec.displayName} + ' - ' + ${site.title}" th:if="${_templateId}==tag"></title>
+  <title th:text="${singlePage.spec.title} + ' - ' + ${site.title}" th:if="${_templateId}==page"></title>
+  <title th:text="'分类：' + ${site.title}" th:if="${_templateId}==categories"></title>
+  <title th:text="'分类：' + ${category.spec.displayName} + ' - ' + ${site.title}" th:if="${_templateId}==category"></title>
+  <title th:text="'归档：' + ${site.title}" th:if="${_templateId}==archives"></title>
   <link rel="icon" th:href="${site.favicon}">
 
   <!-- Raleway-Font -->
