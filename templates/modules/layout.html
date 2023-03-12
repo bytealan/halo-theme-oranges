@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" th:fragment="html (content)" color-mode="light">
+<html lang="en" th:fragment="html (content,title)" color-mode="light">
 
-  <th:block th:replace="~{modules/header}" />
+  <th:block th:replace="~{modules/header}" th:with="title=${title}" />
   <body>
     <div id="app">
       <th:block th:replace="~{modules/navigation}" />
