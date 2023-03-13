@@ -35,6 +35,8 @@ pnpm dev
 ```
 
 ## 更新
+### [1.0.4] 2023/03/13
+- [#8](https://github.com/bytealan/halo-theme-oranges/pull/8) 在 title 中显示详细标题信息
 ### [1.0.3] 2023/03/06
 - [#6](https://github.com/bytealan/halo-theme-oranges/pull/6) 页脚添加RSS
 ### [1.0.2] 2023/02/21
